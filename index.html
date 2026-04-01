@@ -3,16 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>666RREY</title>
-    <meta
-      name="description"
-      content="Чёрно-белый emo/goth лэндинг: SoundCloud профиль и Telegram бот."
-    />
+    <title>666RREY — готический портал</title>
+    <meta name="description" content="666RREY — emo/goth: музыка, стримы, тёмное сообщество." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Roboto+Mono:wght@400;500;700&family=UnifrakturCook:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel+Decorative:wght@400;700;900&family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&display=swap"
       rel="stylesheet"
     />
 
@@ -20,42 +17,106 @@
   </head>
   <body>
     <canvas id="viz" aria-hidden="true"></canvas>
-    <div class="overlay" aria-hidden="true"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <div class="shimmer-overlay" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <!-- готические пилястры -->
+    <div class="gothic-pillars" aria-hidden="true">
+      <div class="pillar pillar-left"></div>
+      <div class="pillar pillar-right"></div>
+    </div>
+    <div class="corner-ornament corner-tl"></div>
+    <div class="corner-ornament corner-tr"></div>
+    <div class="corner-ornament corner-bl"></div>
+    <div class="corner-ornament corner-br"></div>
 
     <main class="wrap">
       <section class="hero">
-        <div
-          class="avatar-cross"
-          role="button"
-          tabindex="0"
-          aria-label="Череп смеется при нажатии"
-        >
-          <img class="avatar-cross__img" src="./image.jpg" alt="" />
+        <div class="avatar-container">
+          <div class="avatar-cross" role="button" tabindex="0" aria-label="Череп смеётся">
+            <img class="avatar-cross__img" src="./image.jpg" alt="666RREY avatar" />
+          </div>
+          <div class="spike-ring" aria-hidden="true">
+            <div class="spike spike--t"></div>
+            <div class="spike spike--r"></div>
+            <div class="spike spike--b"></div>
+            <div class="spike spike--l"></div>
+          </div>
         </div>
-        <h1 class="title">
-          <span class="glitch" data-text="666RREY">666RREY</span>
-        </h1>
 
-        <div class="cards" role="navigation" aria-label="Ссылки">
-          <a
-            class="card"
-            href="https://on.soundcloud.com/XiIaAVAXTqiQHGAL3M"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="card__label">SoundCloud</span>
-            <span class="card__hint">профиль</span>
+        <div class="melting-container">
+          <h1 class="title">
+            <span>666RREY</span>
+          </h1>
+          <!-- Тающие капли -->
+          <div class="melting-drops" aria-hidden="true">
+            <div class="melt-drop"></div>
+            <div class="melt-drop"></div>
+            <div class="melt-drop"></div>
+            <div class="melt-drop"></div>
+            <div class="melt-drop"></div>
+          </div>
+        </div>
+
+        <nav class="cards" aria-label="Социальные ссылки">
+          <!-- SoundCloud -->
+          <a class="card" href="https://on.soundcloud.com/XiIaAVAXTqiQHGAL3M" target="_blank" rel="noopener noreferrer">
+            <div class="card__icon-wrap">
+              <svg class="card__icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.172 1.308c.013.06.045.094.104.094.058 0 .092-.037.104-.094l.195-1.308-.195-1.332c-.012-.057-.046-.094-.104-.094m1.82-.69c-.07 0-.12.056-.127.12l-.217 2.016.217 1.972c.007.07.057.12.127.12.068 0 .118-.053.126-.12l.246-1.972-.246-2.016c-.008-.064-.058-.12-.127-.12m.91-.23c-.087 0-.15.067-.153.146l-.198 2.246.198 2.154c.003.082.066.146.153.146.085 0 .148-.064.152-.146l.225-2.154-.225-2.246c-.004-.08-.067-.146-.152-.146m.904-.098c-.098 0-.17.074-.174.164l-.179 2.344.179 2.196c.004.09.076.164.174.164.097 0 .17-.074.174-.164l.202-2.196-.202-2.344c-.004-.09-.077-.164-.174-.164m.91.032c-.11 0-.191.085-.195.19l-.16 2.312.16 2.234c.004.105.085.19.195.19.107 0 .189-.085.194-.19l.18-2.234-.18-2.312c-.005-.105-.087-.19-.194-.19m.909-.048c-.12 0-.21.093-.215.21l-.14 2.36.14 2.27c.005.118.095.21.215.21.118 0 .208-.092.213-.21l.16-2.27-.16-2.36c-.005-.117-.095-.21-.213-.21m.907-.043c-.13 0-.228.1-.232.228l-.12 2.403.12 2.305c.004.128.102.228.232.228.128 0 .225-.1.23-.228l.137-2.305-.137-2.403c-.005-.128-.102-.228-.23-.228m.908.007c-.14 0-.245.11-.248.244l-.1 2.396.1 2.339c.003.135.108.244.248.244.137 0 .242-.11.246-.244l.114-2.339-.114-2.396c-.004-.134-.11-.244-.246-.244m.9-.043c-.15 0-.262.118-.265.264l-.082 2.439.082 2.372c.003.145.115.262.265.262.148 0 .26-.117.264-.262l.093-2.372-.093-2.439c-.004-.146-.116-.264-.264-.264m.908.014c-.16 0-.28.126-.283.281l-.063 2.425.063 2.404c.003.155.123.28.283.28.157 0 .277-.125.28-.28l.072-2.404-.072-2.425c-.003-.155-.123-.281-.28-.281m.908.017c-.17 0-.298.133-.3.297l-.045 2.408.045 2.437c.002.164.13.297.3.297.167 0 .295-.133.298-.297l.052-2.437-.052-2.408c-.003-.164-.13-.297-.298-.297m.908.008c-.18 0-.315.14-.317.313l-.025 2.4.025 2.47c.002.173.137.313.317.313.177 0 .313-.14.315-.313l.029-2.47-.029-2.4c-.002-.173-.138-.313-.315-.313z"/>
+              </svg>
+            </div>
+            <div class="card__body">
+              <span class="card__label">SoundCloud</span>
+            </div>
+            <div class="card__arrow">→</div>
           </a>
 
-          <a
-            class="card"
-            href="https://t.me/SC_666rrey_bot"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="card__label">Telegram бот</span>
-            <span class="card__hint">предложить трек</span>
+          <!-- Telegram канал -->
+          <a class="card" href="https://t.me/S66rrey" target="_blank" rel="noopener noreferrer">
+            <div class="card__icon-wrap">
+              <svg class="card__icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+              </svg>
+            </div>
+            <div class="card__body">
+              <span class="card__label">Telegram</span>
+            </div>
+            <div class="card__arrow">→</div>
           </a>
+
+          <!-- Telegram бот -->
+          <a class="card" href="https://t.me/SC_666rrey_bot" target="_blank" rel="noopener noreferrer">
+            <div class="card__icon-wrap">
+              <svg class="card__icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/>
+              </svg>
+            </div>
+            <div class="card__body">
+              <span class="card__label">Telegram бот</span>
+            </div>
+            <div class="card__arrow">→</div>
+          </a>
+
+          <!-- Twitch -->
+          <a class="card" href="https://www.twitch.tv/perox1dexd" target="_blank" rel="noopener noreferrer">
+            <div class="card__icon-wrap">
+              <svg class="card__icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0z"/>
+              </svg>
+            </div>
+            <div class="card__body">
+              <span class="card__label">Twitch</span>
+            </div>
+            <div class="card__arrow">→</div>
+          </a>
+        </nav>
+
+        <div class="footer-sigil" aria-hidden="true">
+          <span class="sigil-line"></span>
+          <span class="sigil-cross">✝</span>
+          <span class="sigil-line"></span>
         </div>
       </section>
     </main>
@@ -63,4 +124,3 @@
     <script src="./script.js"></script>
   </body>
 </html>
-
